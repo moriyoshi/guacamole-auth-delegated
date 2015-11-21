@@ -1,0 +1,17 @@
+{
+
+    "guacamoleVersion" : "0.9.8",
+
+    "name"      : "Delegated Authentication",
+    "namespace" : "guac-delegated",
+
+    "authProviders" : [
+        "jp.opencollector.guacamole.auth.delegated.DelegatedAuthenticationProvider"
+    ],
+
+    "translations" : [
+        "translations/en.json"
+    ]
+
+}
+

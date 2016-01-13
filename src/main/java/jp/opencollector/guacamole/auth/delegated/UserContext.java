@@ -35,6 +35,7 @@ import org.glyptodon.guacamole.net.auth.Connection;
 import org.glyptodon.guacamole.net.auth.ConnectionGroup;
 import org.glyptodon.guacamole.net.auth.ConnectionRecordSet;
 import org.glyptodon.guacamole.net.auth.Directory;
+import org.glyptodon.guacamole.net.auth.Identifiable;
 import org.glyptodon.guacamole.net.auth.User;
 import org.glyptodon.guacamole.net.auth.simple.SimpleConnection;
 import org.glyptodon.guacamole.net.auth.simple.SimpleConnectionGroup;
@@ -42,7 +43,7 @@ import org.glyptodon.guacamole.net.auth.simple.SimpleConnectionRecordSet;
 import org.glyptodon.guacamole.net.auth.simple.SimpleDirectory;
 import org.glyptodon.guacamole.net.auth.simple.SimpleUser;
 
-class SingletonDirectory<T> implements Directory<T> {
+class SingletonDirectory<T extends Identifiable> implements Directory<T> {
 	private T singleton;
 	private Map<String, T> singletonMap;
 
